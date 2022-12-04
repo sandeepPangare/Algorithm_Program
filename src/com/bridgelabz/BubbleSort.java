@@ -11,7 +11,7 @@ public class BubbleSort {
 
             for (int j = 0; j < a.length - 1 - i; j++) {
 
-                if (a[j] > a[j + 1]) {
+                if (a[j].compareTo(a[j + 1]) > 0) {
 
                     temp = a[j];
                     a[j] = a[j + 1];
@@ -19,10 +19,12 @@ public class BubbleSort {
                 }
             }
         }
-
-        for (int i : a) {
-
-            System.out.print(i +" ");
+        for(int i = 0; i < a.length; i++) {
+            System.out.print(a[i]);
+            if(i < a.length-1) {
+                System.out.print(",");
+            }
         }
+        System.out.println(".");
     }
-}
+    }
